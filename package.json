@@ -1,0 +1,30 @@
+{
+  "name": "react-native-ablogger",
+  "description": "Simple Logger API for iOS & Android.",
+  "author": "Jim Binea <andy.bin123@gmail.com>",
+  "version": "0.1.0",
+  "main": "dist/Logger.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/benwixen/react-native-ablogger"
+  },
+  "keywords": [
+    "react",
+    "react-native",
+    "react-module",
+    "logger"
+  ],
+  "peerDependencies": {
+    "react": ">=15.3.1",
+    "react-native": ">=0.47"
+  },
+  "license": "Apache-2.0",
+  "rnpm": {
+    "android": {
+      "sourceDir": "./android"
+    }
+  }
+}
