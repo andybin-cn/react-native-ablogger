@@ -1,3 +1,5 @@
 rootProject.name = 'tests'
 
 include ':app'
+include ':react-native-logger'
+project(':react-native-logger').projectDir = new File(rootProject.projectDir, '../../android')
