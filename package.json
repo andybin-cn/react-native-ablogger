@@ -3,7 +3,7 @@
   "description": "Simple Logger API for iOS & Android.",
   "author": "Jim Binea <andy.bin123@gmail.com>",
   "version": "0.1.0",
-  "main": "dist/Logger.js",
+  "main": "dist/ABLogger.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -15,7 +15,8 @@
     "react",
     "react-native",
     "react-module",
-    "logger"
+    "logger",
+    "ABLogger"
   ],
   "peerDependencies": {
     "react": ">=15.3.1",
