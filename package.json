@@ -25,7 +25,7 @@
   "license": "Apache-2.0",
   "rnpm": {
     "android": {
-      "__sourceDir": "./android",
+      "sourceDir": "./android",
       "buildPatch": "    implementation 'com.orhanobut:logger:2.2.0'",
       "packageImportPath": "import andybin.rn.logger.ABLogger;",
       "packageInstance": "new ABLogger()"
