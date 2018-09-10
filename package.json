@@ -27,8 +27,8 @@
     "android": {
       "sourceDir": "./android",
       "buildPatch": "    implementation 'com.orhanobut:logger:2.2.0'",
-      "packageImportPath": "import andybin.rn.logger.ABLogger;",
-      "packageInstance": "new ABLogger()"
+      "packageImportPath": "import andybin.rn.logger.ABLoggerPackage;",
+      "packageInstance": "new ABLoggerPackage()"
     }
   }
 }
