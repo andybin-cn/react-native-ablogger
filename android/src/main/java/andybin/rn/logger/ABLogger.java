@@ -82,7 +82,11 @@ public class ABLogger extends ReactContextBaseJavaModule {
         List<Object> argsList = args.toArrayList();
         String[] params = new String[argsList.size()];
         for (int i = 0; i < argsList.size(); i++) {
+          if(argsList.get(i) != null) {
             params[i] = argsList.get(i).toString();
+          } else {
+            params[i] = "null";
+          }
         }
         return params;
     }
