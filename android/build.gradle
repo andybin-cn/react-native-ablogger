@@ -63,11 +63,11 @@ android {
 }
 
 dependencies {
-    api 'com.facebook.react:react-native:+'
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
-    testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'com.android.support.test:runner:1.0.2'
-    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    compile 'com.facebook.react:react-native:+'
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    testCompile 'junit:junit:4.12'
+    androidTestCompile 'com.android.support.test:runner:1.0.2'
+    androidTestCompile 'com.android.support.test.espresso:espresso-core:3.0.2'
 
-    implementation 'com.orhanobut:logger:2.2.0'
+    compile 'com.orhanobut:logger:2.2.0'
 }
