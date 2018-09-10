@@ -21,13 +21,16 @@ export default class App extends Component {
 
   constructor(props) {
     super(props)
-    ABLogger.configeLogger({
-      localStorageEnable: "true",
-      filePath: "ablogger",
+    console.log('App constructor start')
+    ABLogger.configLogger({
+      localStorageEnable: true,
+      filePath: 'ablogger',
       MaxBytes: 500 * 1024 //500K
     })
-    ABLogger.d("debug: 1234 %s", "andy")
-    ABLogger.e("error: 1234 %s", "andy -e")
+    
+    ABLogger.d('debug: 1234', 'andy')
+    ABLogger.e('error: 1234', 'andy -e', {k: "asdas", d: "dasdasd"})
+    console.log('App constructor end')
   }
 
   render() {

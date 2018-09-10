@@ -1,28 +1,41 @@
-import ReactNative from 'react-native'
+import { NativeModules } from 'react-native'
 
-const RNABLogger = ReactNative.NativeModules.RNABLogger
+const RNABLogger = NativeModules.ABLogger
 
 class ABLogger {
-  configeLogger({localStorageEnable, filePath, MaxBytes}) {
-    RNABLogger.configeLogger({localStorageEnable, filePath, MaxBytes})
+  configLogger({localStorageEnable, filePath, MaxBytes}) {
+    RNABLogger.configLogger({localStorageEnable, filePath, MaxBytes}, (folder) => {
+      console.info('RNABLogger.configLogger result:', folder)
+    })
+  }
+  formatArguments(originArgs) {
+    let msg, args
+    if(originArgs && originArgs.length > 0) {
+      msg = originArgs[0]
+    }
+    if(originArgs && originArgs.length > 1) {
+      args = Array.prototype.slice.call(originArgs).slice(1)
+      msg = msg + args.map(item => ' %s').join('')
+    }
+    return [msg, args]
   }
   d() {
-    RNABLogger.d(...arguments)
+    RNABLogger.d(...this.formatArguments(arguments))
   }
   e() {
-    RNABLogger.e(...arguments)
+    RNABLogger.e(...this.formatArguments(arguments))
   }
   w() {
-    RNABLogger.w(...arguments)
+    RNABLogger.w(...this.formatArguments(arguments))
   }
   v() {
-    RNABLogger.v(...arguments)
+    RNABLogger.v(...this.formatArguments(arguments))
   }
   i() {
-    RNABLogger.i(...arguments)
+    RNABLogger.i(...this.formatArguments(arguments))
   }
   wtf() {
-    RNABLogger.wtf(...arguments)
+    RNABLogger.wtf(...this.formatArguments(arguments))
   }
   json(json) {
     RNABLogger.json(json)
